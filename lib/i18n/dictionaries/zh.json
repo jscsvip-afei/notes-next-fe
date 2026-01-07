@@ -1,0 +1,41 @@
+{
+  "common": {
+    "appName": "Next云笔记",
+    "save": "保存",
+    "cancel": "取消",
+    "delete": "删除",
+    "edit": "编辑",
+    "confirm": "确认",
+    "loading": "加载中..."
+  },
+  "header": {
+    "title": "Next云笔记",
+    "newNote": "新建笔记"
+  },
+  "sidebar": {
+    "search": "搜索笔记...",
+    "noNotes": "暂无笔记",
+    "noResults": "未找到结果"
+  },
+  "note": {
+    "titlePlaceholder": "笔记标题",
+    "contentPlaceholder": "开始写作...",
+    "saving": "保存中...",
+    "done": "完成",
+    "deleting": "删除中...",
+    "notFound": "笔记不存在",
+    "notFoundDesc": "无法找到 ID 为 {id} 的笔记",
+    "deleteConfirm": "确定要删除这篇笔记吗？",
+    "lastUpdated": "最后更新于"
+  },
+  "empty": {
+    "title": "选择一个笔记",
+    "description": "从左侧选择一个笔记开始阅读，或创建新笔记"
+  },
+  "validation": {
+    "titleRequired": "标题不能为空",
+    "titleTooLong": "标题过长，请缩短至50字以内",
+    "contentRequired": "内容不能为空",
+    "contentTooLong": "内容过长，请缩短至1000字以内"
+  }
+}
