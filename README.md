@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📝 Next云笔记 (Next.js Note App)
 
-## Getting Started
+这是一个基于 **Next.js 16 (App Router)** 和 **TypeScript** 构建的现代化笔记应用。它演示了如何使用最新的前端技术栈构建一个高性能、响应式且功能完备的 React 应用。
 
-First, run the development server:
+![License](https://img.shields.io/badge/license-MIT-blue)
+![Next.js](https://img.shields.io/badge/Next.js-16.1-black)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-v4-38bdf8)
+
+## 🏗️ 技术架构
+
+本项目采用了目前最前沿的主流前端技术栈，注重代码的可维护性与用户体验。
+
+- **核心框架**: [Next.js 16](https://nextjs.org/) (App Router 架构)
+- **编程语言**: [TypeScript](https://www.typescriptlang.org/) (强类型安全)
+- **状态管理**: [Zustand](https://github.com/pmndrs/zustand) (轻量级状态管理 + `persist` 本地持久化)
+- **UI 样式**: [Tailwind CSS v4](https://tailwindcss.com/) + [DaisyUI v5](https://daisyui.com/) (原子化 CSS 与 UI 组件库)
+- **内容渲染**: [Marked](https://marked.js.org/) (Markdown 解析)
+- **国际化**: 自定义 i18n 实现 (基于 Zustand)
+
+## ✨ 功能特性
+
+- **📝 Markdown 支持**: 支持编写和实时预览 Markdown 格式的笔记。
+- **💾 本地持久化**: 使用 LocalStorage 自动保存笔记数据，刷新页面不丢失。
+- **🎨 响应式设计**: 适配桌面端和移动端，提供舒适的书写体验。
+- **🌍 多语言支持**: 内置中英文切换功能。
+- **⚡ 高性能**: 基于 Next.js 的服务端组件 (RSC) 
+- **🌑/☀️ 本地化存储**: 极其轻量，无需配置后端数据库即可使用。
+
+## 🚀 快速开始
+
+### 环境要求
+
+- Node.js 18.17 或更高版本
+
+### 1. 克隆项目
+
+```bash
+git clone <repository-url>
+cd notes-next-fe
+```
+
+### 2. 安装依赖
+
+```bash
+npm install
+# 或者
+yarn install
+# 或者
+pnpm install
+```
+
+### 3. 启动开发服务器
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+打开浏览器访问 [http://localhost:3000](http://localhost:3000) 即可看到应用。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 4. 构建与部署
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+本项目为纯前端Nextjs项目,无需任何后端配置，适合直接部署在 EdgeOne、Vercel 等静态托管平台。
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## 📂 目录结构
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+.
+├── app/                  # Next.js App Router 路由目录
+│   ├── note/             # 笔记相关页面 ([id], edit 等)
+│   ├── actions.ts        # Server Actions
+│   ├── layout.tsx        # 全局布局
+│   └── page.tsx          # 首页
+├── components/           # React 组件
+│   ├── Note/             # 笔记编辑器、预览器组件
+│   ├── Sidebar/          # 侧边栏组件
+│   └── ...
+├── lib/                  # 工具库
+│   ├── store.ts          # 笔记状态管理 (Zustand)
+│   └── i18n/             # 国际化配置
+├── public/               # 静态资源
+└── README.md             # 项目说明文档
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🤝 贡献
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+欢迎提交 Issue 和 Pull Request 来改进这个项目！
